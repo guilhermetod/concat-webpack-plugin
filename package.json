@@ -1,6 +1,6 @@
 {
   "name": "concat-webpack-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Webpack plugin to concat the files after output",
   "keywords": [
     "Concat",

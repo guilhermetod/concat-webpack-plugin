@@ -9,7 +9,7 @@ export class ConcatWebpackPlugin implements WebpackPluginInstance {
   constructor(private outputFile: string) { }
 
   apply(compiler: Compiler): void {
-    compiler.hooks.afterEmit.tap(this.constructor.name, async () => {
+    compiler.hooks.afterEmit.tapPromise(this.constructor.name, async () => {
       const { output } = compiler.options;
       const outputPath = output.path ?? path.dirname(output.filename as string);
       const sourceFiles = path.join(outputPath, '*.js');
